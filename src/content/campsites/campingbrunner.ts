@@ -1,180 +1,146 @@
 import type { CampsiteConfig } from "../types";
 
 /**
- * Camping Brunner am See — Döbriach am Millstätter See, Kärnten.
- * Alle Texte/Fakten belegt aus campingbrunner.at (Stand-Scrape 2026-06).
- * Bilder = ausschließlich eigene Fotos/Gästefotos von Camping Brunner
- * (laut Quelle „aus eigenem Archiv sowie zum Großteil von den Gästen") in
- * /public/campsites/campingbrunner/.
- *
- * EHRLICH:
- * - Der Platz liegt WIRKLICH direkt am See mit eigenem, flach abfallendem
- *   Privatstrand nur für Gäste (Homepage + viele Testimonials) → „direkt am
- *   See"/Privatstrand sind belegt, kein Greenwashing.
- * - Preise: Auf den Webseiten ist nur EIN Preis genannt (Familienspecial
- *   Vorsaison € 37,30/Nacht inkl. 2 Erw. + eigene Kinder + Platz). Die
- *   vollständigen Preislisten liegen nur als PDF vor (nicht gescrapt) →
- *   deshalb NUR die eine reale Stellplatz-Zahl verwendet, Rest „auf Anfrage".
- *   KEIN Platzhalter (echte Quelle vorhanden) → pricesArePlaceholder=false.
- * - Hunde: am See/auf der Wiese NICHT erlaubt (bewusste Familien-Regel) → wird
- *   nirgends als „hundefreundlich" geframt.
- * - Bauernhof-Apartments sind laut Quelle „geschlossen" → nicht beworben.
- * - Keine Koordinaten in der Quelle → coords ausgelassen (Karte aus, Adresse zeigt).
+ * Camping Brunner am See — Döbriach, Millstätter See, Kärnten.
+ * Honest, quellen-gebunden aus raw/digest. Du-Anrede, Original-Palette, heroVariant center.
  */
 const IMG = "/campsites/campingbrunner";
 
-export const campingbrunner: CampsiteConfig = {
+const campingbrunner: CampsiteConfig = {
   name: "Camping Brunner am See",
-  shortName: "Camping Brunner",
+  shortName: "Brunner",
   slug: "campingbrunner",
-  ort: "Döbriach am Millstätter See",
+  ort: "Döbriach",
   region: "Kärnten",
-  brandKind: "Camping & Apartments",
+  brandKind: "Camping am See",
   see: "Millstätter See",
   regionLong: "Millstätter See · Kärnten · Österreich",
 
-  claim: "Camping der Luxusklasse, direkt am Millstätter See",
-  claimEmphasis: "direkt am Millstätter See",
-  intro:
-    "Mehrfach ausgezeichneter Komfort-Campingplatz mit eigenem Privatstrand am glasklaren Millstätter See — mitten in der Kärntner Bergwelt, ganzjährig geöffnet.",
+  heroVariant: "center",
 
-  logo: { src: `${IMG}/logo-camping-brunner.png`, alt: "Camping Brunner am See — direkt am See" },
+  claim: "Dein Privatstrand am Millstätter See",
+  claimEmphasis: "am Millstätter See",
+  emailDetail: "eure gepflegte Seewiese mit altem Baumbestand",
+  intro:
+    "Direkt am Ostufer des Millstätter Sees, mitten in den Bergen: ein vielfach ausgezeichneter Komfort-Campingplatz mit eigenem flachen Sandstrand, gepflegten Stellplätzen und Seewasser in Trinkwasserqualität — ganzjährig geöffnet.",
+
+  logo: { src: `${IMG}/logo.png`, alt: "Camping Brunner am See Logo" },
 
   statement: {
-    text: "Eine Ferienanlage der Spitzenklasse, die man sich leisten kann — direkt am See, mitten in der intakten Natur Kärntens.",
-    emphasis: "die man sich leisten kann",
+    text: "Der flach abfallende Sandstrand gehört nur den Gästen von Camping Brunner — kein öffentliches Strandbad, nur euer See.",
+    emphasis: "nur den Gästen",
   },
 
   pillars: [
     {
-      title: "Direkt am See",
-      text: "Dein Platz auf der gepflegten Seewiese mit altem Baumbestand — der Millstätter See beginnt vor deinem Vorzelt.",
-      image: { src: `${IMG}/pillar-direkt-am-see.webp`, alt: "Wohnwagen direkt am Ufer des Millstätter Sees bei Camping Brunner" },
+      title: "Privatstrand nur für Gäste",
+      text: "Einer der schönsten flachen Sandstrände am Millstätter See — Privatstrand ausschließlich für die Gäste von Camping Brunner, ohne öffentlichen Tagesbetrieb.",
+      image: { src: `${IMG}/privatstrand-luftbild.webp`, alt: "Privater Sandstrand von Camping Brunner am Millstätter See aus der Luft" },
     },
     {
       title: "Mitten in den Bergen",
-      text: "Eingebettet zwischen Biosphärenpark Nockberge und Nationalpark Hohe Tauern — Wandern und Radfahren starten direkt am Platz.",
-      image: { src: `${IMG}/pillar-berge-natur.webp`, alt: "Familie auf einer Bank mit Blick über die Kärntner Bergwelt" },
+      text: "Eingebettet zwischen Biosphärenpark Nockberge und Nationalpark Hohe Tauern — der See hat Trinkwasserqualität, ringsum Wald und Gipfel über 3000 m.",
+      image: { src: `${IMG}/seewiese-abendsonne.webp`, alt: "Seewiese von Camping Brunner in der Abendsonne am Millstätter See" },
     },
     {
-      title: "Mediterranes Lebensgefühl",
-      text: "Südlich der Alpen wärmt sich das kristallklare Wasser auf bis zu 26 °C — Sonne, See und entspannte Abende am Wasser.",
-      image: { src: `${IMG}/pillar-lebensgefuehl.webp`, alt: "Sommerabend am Millstätter See am Strand von Camping Brunner" },
+      title: "Ganzjährig geöffnet",
+      text: "Vom Frühlingsbad bis zum Wintertag am verschneiten Ufer: Camping Brunner ist das ganze Jahr über geöffnet — vier Jahreszeiten am selben Platz.",
+      image: { src: `${IMG}/see-winter.webp`, alt: "Verschneites Seeufer von Camping Brunner im Winter" },
     },
   ],
 
   usps: [
+    "Privatstrand nur für Gäste",
     "Direkt am Millstätter See",
-    "Eigener Privatstrand nur für Gäste",
     "Ganzjährig geöffnet",
+    "Flacher Sandstrand",
     "Gratis WLAN",
-    "Mehrfach international ausgezeichnet",
-    "ADEG-Markt & Radverleih nebenan",
+    "Vielfach ausgezeichnet",
   ],
 
   trust: {
-    heading: "Worauf bei Camping Brunner Verlass ist",
-    headingEmphasis: "Verlass",
+    heading: "Seit 1965 am selben Ufer",
+    headingEmphasis: "1965",
     intro:
-      "1965 eröffnet und bis heute persönlich geführt: ein flach abfallender Privatstrand nur für Gäste, gepflegte Sanitäranlagen in Top-Qualität und klare Regeln für ein ruhiges, familienfreundliches Miteinander — vielfach international ausgezeichnet.",
+      "1965 eröffnet und bis heute familiär geführt: Camping Brunner zählt zu Europas bestbewerteten Plätzen — ausgezeichnet von Camping.Info, ADAC und dem DCC, und doch vor allem ein Ort zum Ankommen.",
   },
 
-  // Echte, auf der Quelle klar ausgewiesene Auszeichnungen (Logos von der Seite).
   awards: [
-    { label: "camping.info Award 2026 · Bester Campingplatz Kärntens", image: { src: `${IMG}/award-campinginfo-2026.png`, alt: "camping.info Award 2026" } },
-    { label: "ACSI Award 2022 — Camping Brunner am See", image: { src: `${IMG}/award-acsi-2022.png`, alt: "ACSI Award 2022 für Camping Brunner am See" } },
-    { label: "DCC Europa-Preisträger 2020", image: { src: `${IMG}/award-dcc-2020.png`, alt: "DCC Europa-Preisträger 2020, Deutscher Camping-Club" } },
-    { label: "ADAC Tipp · PiNCAMP", image: { src: `${IMG}/award-adac.png`, alt: "ADAC Tipp Auszeichnung, PiNCAMP" } },
-    { label: "ANWB Erkende Camping 2020", image: { src: `${IMG}/award-anwb.png`, alt: "ANWB Erkende Camping 2020" } },
-    { label: "EU Ecolabel", image: { src: `${IMG}/award-eu-ecolabel.png`, alt: "EU Ecolabel" } },
-    { label: "Österreichisches Umweltzeichen", image: { src: `${IMG}/award-umweltzeichen.png`, alt: "Österreichisches Umweltzeichen" } },
-    { label: "Qualität Kärnten", image: { src: `${IMG}/award-qualitaet-kaernten.png`, alt: "Qualitätssiegel Kärnten" } },
+    { label: "Camping.Info Award — Bester Kärntens" },
+    { label: "Top 12 Campingplätze Europas" },
+    { label: "DCC Europapreis 2020" },
+    { label: "ADAC / PiNCAMP" },
+    { label: "EU Ecolabel & Österr. Umweltzeichen" },
   ],
 
-  // Ganzjährig geöffnet (Badesaison Anfang Mai – Mitte September).
-  saison: { von: "Januar", bis: "Dezember" },
+  saison: { von: "Jänner", bis: "Dezember" },
 
   hero: {
-    aerial: { src: `${IMG}/hero-aerial-see.webp`, alt: "Luftaufnahme: Camping Brunner am See direkt am Millstätter See mit Blick über See und Berge" },
-    sunset: { src: `${IMG}/hero-sonnenuntergang.webp`, alt: "Sonnenuntergang über dem Millstätter See am Strand von Camping Brunner" },
+    aerial: { src: `${IMG}/hero-luftaufnahme-see.webp`, alt: "Luftaufnahme von Camping Brunner am Ufer des Millstätter Sees" },
+  },
+
+  breather: {
+    image: { src: `${IMG}/sonnenuntergang-strand.webp`, alt: "Sonnenuntergang über dem Millstätter See am Strand von Camping Brunner" },
+    line: "Wenn die Abendsonne das Ufer in goldenes Licht taucht.",
   },
 
   camping: {
     heading: "Camping direkt am Wasser",
     intro:
-      "Große, gepflegte Stellplätze unterschiedlicher Kategorien — alle mit Strom (6 A, einige 16 A + SAT), fast alle mit Wasser- und Abwasseranschluss. Barrierefrei, komfortabel und mit eigenem Seezugang.",
+      "Große, gepflegte Stellplätze unterschiedlicher Kategorien, alle mit Strom, fast alle mit Wasser- und Abwasseranschluss — und der See immer in Sichtweite.",
     features: [
       {
-        title: "Direkt am See gelegen",
-        text: "Stellplätze auf der weitläufigen Seewiese mit altem Baumbestand — einer der schönsten flachen Sandstrände am Millstätter See liegt direkt davor.",
-        image: { src: `${IMG}/camping-luftaufnahme-see.webp`, alt: "Luftaufnahme von Camping Brunner mit Seewiese, Strand und Bootsstegen am Millstätter See" },
+        title: "Stellplätze mit Seeblick",
+        text: "Vom Vorzelt direkt auf den Millstätter See: gepflegte Plätze in erster Reihe, viele mit Wasser- und Abwasseranschluss, alle mit Strom (6 A, einige 16 A).",
+        image: { src: `${IMG}/stellplatz-seeblick.webp`, alt: "Stellplatz mit Seeblick und Vorzelt am Millstätter See" },
       },
       {
-        title: "Seeblick vom Vorzelt",
-        text: "Aufwachen am Wasser: viele Plätze blicken direkt über den glasklaren See auf die Berge — Morgenschwimmen inklusive.",
-        image: { src: `${IMG}/camping-seeblick-stellplatz.webp`, alt: "Blick vom Wohnwagen-Vorzelt über den Millstätter See bei Camping Brunner" },
+        title: "Liegewiese am See",
+        text: "Die weitläufige Seewiese mit altem Baumbestand ist das Herzstück des Platzes — Sonnen, Spielen und Baden direkt am eigenen Strand.",
+        image: { src: `${IMG}/liegewiese-strand.webp`, alt: "Liegewiese mit alten Bäumen am Strand von Camping Brunner" },
       },
       {
-        title: "Eigener Privatstrand",
-        text: "Flach abfallender Sandstrand nur für Gäste — kein öffentliches Strandbad, dafür viel Platz auf der Liegewiese am Wasser.",
-        image: { src: `${IMG}/camping-privatstrand.webp`, alt: "Privatstrand und Liegewiese am See nur für Gäste von Camping Brunner" },
-      },
-    ],
-  },
-
-  mobilheime: {
-    heading: "Apartments & Chalets",
-    intro:
-      "Lieber feste Wände? Moderne, generalsanierte Apartments und kleine, feine Chalets in Toplage — direkt am Gelände von Camping Brunner am See, mit Gratis-Seezugang.",
-    items: [
-      {
-        name: "Apartment",
-        kind: "Apartment · generalsaniert",
-        text: "Modernes, neu renoviertes Apartment in Toplage direkt am Gelände — hell, wohnlich und nur ein paar Schritte vom See entfernt.",
-        image: { src: `${IMG}/apartment-schlafzimmer.webp`, alt: "Modernes Apartment-Schlafzimmer bei Camping Brunner am See" },
-        features: ["Direkt am Gelände", "Generalsaniert", "Seezugang inklusive"],
+        title: "Schiffstation nebenan",
+        text: "Die Anlegestelle der Millstätter-See-Schifffahrt liegt gleich neben dem Platz — den ganzen See erreichst du bequem per Schiff.",
+        image: { src: `${IMG}/schiffstation.webp`, alt: "Schiffstation der Millstätter-See-Schifffahrt neben Camping Brunner" },
       },
       {
-        name: "Chalet",
-        kind: "Ferienhaus · modern",
-        text: "Kleine, feine Ferienhäuser direkt am Gelände — generalsaniert, erfrischend modern und gleichzeitig urgemütlich.",
-        image: { src: `${IMG}/chalet-wohnkueche.webp`, alt: "Wohnküche mit Kamin in einem Chalet von Camping Brunner am See" },
-        features: ["Toplage am See", "Komplett renoviert", "Urgemütlich"],
+        title: "ADEG-Markt um die Ecke",
+        text: "Einkaufen ohne Auto: Der ADEG-Supermarkt mit Bäcker und Feinkost liegt nur wenige Schritte vom Campingplatz entfernt.",
+        image: { src: `${IMG}/adeg-markt.webp`, alt: "ADEG-Supermarkt in Döbriach in Gehweite von Camping Brunner" },
       },
       {
-        name: "Apartment am See",
-        kind: "Apartment · Seenähe",
-        text: "Komfortabel ausgestattetes Apartment mit viel Tageslicht — ideal, um nach dem Badetag einfach anzukommen und sich wohlzufühlen.",
-        image: { src: `${IMG}/apartment-seeblick.webp`, alt: "Helles Apartment-Schlafzimmer mit Balkontür bei Camping Brunner am See" },
-        features: ["Modern eingerichtet", "Privatstrand für Gäste", "Ruhige Lage"],
+        title: "Sport & Spiel",
+        text: "Beachvolleyball, Basketball und ein Multifunktionsfeld am Platz — Bewegung und Spiel für Groß und Klein abseits der Liegewiese.",
+        image: { src: `${IMG}/sportplatz.webp`, alt: "Sportplatz mit Beachvolleyball und Basketball bei Camping Brunner" },
+      },
+      {
+        title: "Familiäres Platzleben",
+        text: "Ruhig gelegen mit klaren Regeln für ein rücksichtsvolles Miteinander — hier können Kinder frei zwischen Stellplätzen und Strand unterwegs sein.",
+        image: { src: `${IMG}/platzleben-see.webp`, alt: "Kinder zwischen den Stellplätzen am Seeufer von Camping Brunner" },
       },
     ],
   },
 
   kinder: {
-    heading: "Für Familien gemacht",
+    heading: "Kinder lieben Camping Brunner",
     intro:
-      "Glasklares, flach abfallendes Wasser, ein eigener Sandstrand und Kinderanimation — und weil Hunde am Strand und auf der Badewiese nicht erlaubt sind, können Kinder hier unbeschwert spielen.",
+      "Flacher Sandstrand, komfortable Sanitäranlagen und ein Hundeverbot am Strand — hier dürfen die Kleinen den ganzen Tag gefahrlos draußen sein.",
     features: [
       {
-        title: "Baden im glasklaren See",
-        text: "Trinkwasserqualität und ein flach abfallender Sandstrand — hier lernen schon die Kleinsten schwimmen, in bis zu 26 °C warmem Wasser.",
-        image: { src: `${IMG}/kinder-baden.webp`, alt: "Zwei Mädchen baden mit Luftmatratze im Millstätter See bei Camping Brunner" },
+        title: "Baden am flachen Strand",
+        text: "Der flach abfallende Sandstrand führt sanft ins glasklare, bis zu 26° warme Wasser — ideal für die ersten Schwimmzüge der Kinder.",
+        image: { src: `${IMG}/kinder-baden-steg.webp`, alt: "Kinder springen vom Steg in den flachen Millstätter See" },
       },
       {
-        title: "Plantschen am Sandstrand",
-        text: "Der eigene Privatstrand fällt flach ab — sicher und ideal zum Plantschen, Sandburgen-Bauen und den ganzen Tag im Wasser.",
-        image: { src: `${IMG}/kinder-plantschen.webp`, alt: "Kind plantscht fröhlich im flachen Wasser am Strand von Camping Brunner" },
+        title: "Spielplatz am Platz",
+        text: "Rutsche, Schaukel und Sandkiste unter schattigen Bäumen, nur ein paar Schritte von den Stellplätzen entfernt.",
+        image: { src: `${IMG}/spielplatz.webp`, alt: "Spielplatz mit Rutsche und Sandkiste bei Camping Brunner" },
       },
       {
-        title: "Spielplatz & Kinderanimation",
-        text: "Spielplatz am Platz und wechselnde Animation für die Kleinen — Langeweile kommt im Familienurlaub garantiert nicht auf.",
-        image: { src: `${IMG}/kinder-spielplatz.webp`, alt: "Kinder laufen zum Spielplatz bei Camping Brunner am See" },
-      },
-      {
-        title: "Sicher spielen ohne Hunde",
-        text: "Auf der Badewiese und am Strand sind keine Hunde erlaubt — Kinder können überall am Boden spielen, ganz ohne Sorge.",
-        image: { src: `${IMG}/kinder-animation.webp`, alt: "Kindergruppe bei einem Spiel auf der Wiese von Camping Brunner" },
+        title: "Kinderanimation",
+        text: "In der Saison gibt es ein wechselndes Animationsprogramm auf der Seewiese — Spiele, Basteln und jede Menge neue Freunde.",
+        image: { src: `${IMG}/kinderanimation.webp`, alt: "Kinderanimation auf der Seewiese von Camping Brunner" },
       },
     ],
   },
@@ -182,133 +148,92 @@ export const campingbrunner: CampsiteConfig = {
   aktivitaeten: {
     heading: "Aktiv am Millstätter See",
     intro:
-      "Wasser, Berge und Kultur direkt vor der Tür — und mit der Kärnten Card (Ausgabe an der Rezeption) sind über 100 Ausflugsziele frei zugänglich.",
+      "Wassersport vor der Tür, Wanderungen und Radtouren direkt ab dem Platz: rund um Camping Brunner ist in allen vier Jahreszeiten etwas los.",
     items: [
       {
+        title: "SUP & Wassersport",
+        text: "Stand-up-Paddeln, Surfen, Segeln und Bootsverleih gleich nebenan am Strand — der See lädt zu jeder Art von Wassersport ein.",
+        image: { src: `${IMG}/sup-strand.webp`, alt: "Stand-up-Paddeln am Strand von Camping Brunner am Millstätter See" },
+      },
+      {
+        title: "Wandern in den Nockbergen",
+        text: "Direkt vom Platz hinauf in den Biosphärenpark Nockberge und den Nationalpark Hohe Tauern — zu Almen, Hütten und Gipfeln über 3000 m.",
+        image: { src: `${IMG}/wandern-nockberge.webp`, alt: "Gipfelkreuz mit Blick über den Millstätter See in den Nockbergen" },
+      },
+      {
+        title: "Kanu & Kajak",
+        text: "Den ruhigen Millstätter See vom Wasser aus erkunden — mit Kajak oder Kanu lässt sich das wasserreichste Gewässer Kärntens still entdecken.",
+        image: { src: `${IMG}/kajak-see.webp`, alt: "Kajakfahrer auf dem ruhigen Millstätter See vor den Bergen" },
+      },
+      {
         title: "Yoga am Strand",
-        text: "Yoga am See mit professioneller Trainerin — laut Kerstin der beste Platz der Welt, um tief durchzuatmen und zu entspannen.",
-        image: { src: `${IMG}/aktiv-yoga.webp`, alt: "Yoga-Gruppe auf der Wiese am See bei Camping Brunner" },
+        text: "Morgens auf der Seewiese den Tag begrüßen: Yoga am Strand von Camping Brunner — laut Trainerin Kerstin der beste Platz, um durchzuatmen.",
+        image: { src: `${IMG}/yoga-strand.webp`, alt: "Yoga-Gruppe auf der Seewiese am Strand von Camping Brunner" },
       },
       {
-        title: "Wandern & Bergsteigen",
-        text: "Direkt vom Platz in die Nockberge oder hinauf auf die Gipfel des Nationalparks Hohe Tauern — idyllische Almen und Hüttenwanderungen inklusive.",
-        image: { src: `${IMG}/aktiv-wandern.webp`, alt: "Wanderer am Gipfelkreuz in den Bergen rund um den Millstätter See" },
-      },
-      {
-        title: "Mountainbiken & 28-km-Radweg",
-        text: "Der familienfreundliche Millstätter See Radweg (28 km) führt rund um den See — dazu über 200 MTB-Touren in den Nockbergen.",
-        image: { src: `${IMG}/aktiv-mountainbike.webp`, alt: "Mountainbiker am Gipfel mit Blick über den Millstätter See" },
-      },
-      {
-        title: "Rafting & Kanu",
-        text: "Naturgenuss pur auf wild schäumenden Bächen, umrahmt von imposanten Bergen — für alle Junggebliebenen.",
-        image: { src: `${IMG}/aktiv-rafting.webp`, alt: "Rafting-Gruppe auf einem Wildwasserfluss in Kärnten" },
-      },
-      {
-        title: "Mit dem Schiff über den See",
-        text: "Die Schiffsstation liegt nur rund 3 Gehminuten entfernt — mit der Kärnten Card sind die Linienschiffe am Millstätter See sogar kostenlos.",
-        image: { src: `${IMG}/aktiv-schifffahrt.webp`, alt: "Linienschiff der Millstätter See Schifffahrt an der Schiffsstation" },
+        title: "Panoramaflug über den See",
+        text: "Den Millstätter See und die Nockberge aus der Vogelperspektive erleben — Panoramaflüge starten gleich in der Nähe des Platzes.",
+        image: { src: `${IMG}/panoramaflug.webp`, alt: "Panoramaflug hoch über dem Millstätter See" },
       },
     ],
   },
 
   anreise: {
-    heading: "So findest du uns",
+    heading: "Anfahrt ans Ostufer",
     modes: [
-      { title: "Mit dem Auto", text: "Über die A10 (Tauern Autobahn) bis Spittal/Millstätter See, dann am Seeufer entlang nach Döbriach — Glanzerstraße 108." },
-      { title: "Mit Bahn & Bus", text: "Bahnhof Spittal-Millstättersee, weiter mit der Postbus-Linie 5140 am See entlang oder per Kärnten Transfer direkt zum Platz." },
-      { title: "Vor Ort mobil", text: "Schiffsstation, Linienbus und die Ruftaxis Gomobil/Nockmobil liegen direkt nebenan — Urlaub ganz ohne eigenes Auto, Radverleih gleich um die Ecke." },
+      { title: "Mit dem Auto", text: "Über die A10 Tauernautobahn bis Abfahrt Seeboden/Spittal, dann am Millstätter See entlang nach Döbriach ans Ostufer." },
+      { title: "Mit der Bahn", text: "Bahnhof Spittal-Millstättersee, von dort per Bus oder Taxi nach Döbriach — rund 20 Minuten." },
+      { title: "Per Schiff", text: "Im Sommer mit der Millstätter-See-Schifffahrt: Die Anlegestelle liegt direkt neben dem Platz." },
     ],
   },
 
   galerie: {
     heading: "Sommer am Millstätter See",
     headingEmphasis: "Millstätter See",
-    intro:
-      "Glasklares Wasser, goldene Abende und der See vor der Tür — ein paar Eindrücke vom Privatstrand von Camping Brunner.",
+    intro: "Privatstrand, Seewiese und lange Abende am Wasser — ein paar Eindrücke aus dem Camperalltag bei Brunner.",
     tag: "Ganzjährig geöffnet",
+    moreCount: 24,
     images: [
-      { src: `${IMG}/galerie-privatstrand-see.webp`, alt: "Gäste entspannen auf der Seewiese am Privatstrand mit Blick über den Millstätter See" },
-      { src: `${IMG}/galerie-abend-steg.webp`, alt: "Kinder sitzen am Abend auf dem Steg am Millstätter See" },
-      { src: `${IMG}/galerie-yoga-steg.webp`, alt: "Yoga auf dem Steg am Millstätter See" },
-      { src: `${IMG}/galerie-kinder-see.webp`, alt: "Kinder balancieren spielend im See am Strand von Camping Brunner" },
+      { src: `${IMG}/galerie-baden.webp`, alt: "Kind beim Sprung in den flachen Millstätter See" },
+      { src: `${IMG}/galerie-wiese.webp`, alt: "Kinder auf der Seewiese von Camping Brunner" },
+      { src: `${IMG}/galerie-luftmatratze.webp`, alt: "Mädchen auf der Luftmatratze im Millstätter See" },
+      { src: `${IMG}/galerie-steg-abend.webp`, alt: "Kinder am Steg in der Abendstimmung am See" },
     ],
   },
 
   booking: {
-    heading: "Verfügbarkeit & Anfrage",
-    intro:
-      "Wähle Zeitraum und Personen — das Team von Camping Brunner meldet sich mit deiner persönlichen Verfügbarkeit.",
+    heading: "Sichere dir deinen Platz am See",
+    headingEmphasis: "am See",
+    intro: "Wähle Zeitraum und Kategorie — Camping Brunner bestätigt deine Anfrage persönlich. Online buchen ist ganzjährig möglich.",
     pricesArePlaceholder: false,
     priceNote:
-      "Familienspecial Vorsaison (7.1.–22.5. & 15.9.–23.12.): € 37,30/Nacht inkl. 2 Erwachsene, eigene Kinder & Stellplatz. Hauptsaison-, Apartment- & Chalet-Preise auf Anfrage.",
-    highlight: {
-      title: "Eigener Privatstrand",
-      text: "Flach abfallender Sandstrand nur für Gäste — Seezugang inklusive, ganzjährig geöffnet.",
-    },
+      "Familienspecial in der Nebensaison: € 37,30/Nacht für 2 Erwachsene + eigene Kinder inkl. Stellplatz (07.01.–22.05. & 15.09.–23.12.). Alle übrigen Tarife auf Anfrage bzw. im Online-Preisrechner.",
+    highlight: { title: "Privatstrand inklusive", text: "Eigener flacher Sandstrand nur für Gäste — kein öffentliches Strandbad." },
     categories: [
-      // Einziger auf der Website genannter Preis: Familienspecial Vorsaison € 37,30/Nacht
-      // (inkl. 2 Erw. + eigene Kinder + Platz). Konservativ als „ab 37" angesetzt.
-      { id: "stellplatz", label: "Stellplatz", perNight: 37 },
+      { id: "stellplatz", label: "Stellplatz" },
+      { id: "apartment", label: "Apartment" },
+      { id: "chalet", label: "Chalet" },
     ],
   },
 
   kontakt: {
-    coords: { lat: 46.778519, lng: 13.65068 },
+    coords: { lat: 46.767896, lng: 13.648412 },
     tel: "+43 4246 7189",
     telHref: "tel:+4342467189",
     mail: "info@camping-brunner.at",
-    adresse: "Glanzerstraße 108 · A-9873 Döbriach am Millstätter See · Kärnten",
-    // Keine Koordinaten in der Quelle → ausgelassen (Karte aus, Adresse zeigt).
+    adresse: "Glanzerstraße 108 · 9873 Döbriach · Kärnten",
   },
 
   languages: ["DE", "EN"],
 
   nav: [
-    {
-      label: "Camping",
-      href: "#camping",
-      children: [
-        { label: "Stellplätze am See", href: "#camping" },
-        { label: "Privatstrand", href: "#camping" },
-        { label: "Auszeichnungen", href: "#camping" },
-      ],
-    },
-    {
-      label: "Unterkünfte",
-      href: "#mobilheime",
-      children: [
-        { label: "Apartments", href: "#mobilheime" },
-        { label: "Chalets", href: "#mobilheime" },
-      ],
-    },
-    {
-      label: "Familie",
-      href: "#kinder",
-      children: [
-        { label: "Kinderstrand", href: "#kinder" },
-        { label: "Spielplatz & Animation", href: "#kinder" },
-        { label: "Galerie", href: "#galerie" },
-      ],
-    },
-    {
-      label: "Erleben",
-      href: "#aktivitaeten",
-      children: [
-        { label: "Yoga & Wasser", href: "#aktivitaeten" },
-        { label: "Wandern & Bike", href: "#aktivitaeten" },
-        { label: "Schifffahrt", href: "#aktivitaeten" },
-      ],
-    },
-    {
-      label: "Lage & Preise",
-      href: "#booking",
-      children: [
-        { label: "Preise", href: "#booking" },
-        { label: "Anreise", href: "#anreise" },
-        { label: "Kontakt", href: "#anreise" },
-      ],
-    },
+    { label: "Camping", href: "#camping" },
+    { label: "Familie", href: "#kinder" },
+    { label: "Aktivitäten", href: "#aktivitaeten" },
+    { label: "Preise & Anfahrt", href: "#booking", children: [
+      { label: "Preise", href: "#booking" },
+      { label: "Anfahrt", href: "#anreise" },
+    ]},
   ],
 };
 
